@@ -1,4 +1,6 @@
 import React from 'react';
+import _ from 'lodash';
+
 import {
     Sparklines,
     SparklinesLine,
@@ -6,7 +8,8 @@ import {
 } from 'react-sparklines';
 
 function average(data) {
-    return (data.reduce((x, y) => x + y) / data.length).toFixed(2);
+    return _.round(_.sum(data) / data.length);
+    // return (data.reduce((x, y) => x + y) / data.length).toFixed(2);
 }
 
 function format(data, type, unit) {
