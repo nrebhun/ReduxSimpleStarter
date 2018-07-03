@@ -6,7 +6,7 @@ const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KE
 export const FETCH_WEATHER = 'FETCH_WEATHER';
 export const GET_SELECTED_UNIT = 'GET_SELECTED_UNIT';
 
-// These are the function used by components to get the application state
+// These are the functions used by components to get the application state
 export function fetchWeather(city) {
     const url = `${ROOT_URL}&q=${city},us`;
     const request = axios.get(url);
